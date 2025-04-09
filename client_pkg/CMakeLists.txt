@@ -23,10 +23,13 @@ if(BUILD_TESTING)
 endif()
 
 add_executable(service_client_node src/service_client.cpp)
+add_executable(stop_client_node src/stop_client.cpp)
 ament_target_dependencies(service_client_node rclcpp std_srvs)
+ament_target_dependencies(stop_client_node rclcpp std_srvs)
 
 install(TARGETS
    service_client_node
+   stop_client_node
    DESTINATION lib/${PROJECT_NAME}
  )
 
