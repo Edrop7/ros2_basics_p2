@@ -3,14 +3,14 @@
 #include <string>
 #include <iostream>
 
-#include "t3_action_msg/action/move.hpp"
+#include "custom_interfaces/action/move.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 
 class MyActionClient : public rclcpp::Node
 {
 public:
-  using Move = t3_action_msg::action::Move;
+  using Move = custom_interfaces::action::Move;
   using GoalHandleMove = rclcpp_action::ClientGoalHandle<Move>;
 
   explicit MyActionClient(const rclcpp::NodeOptions & node_options = rclcpp::NodeOptions())

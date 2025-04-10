@@ -9,7 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
-find_package(t3_action_msg REQUIRED)
+find_package(custom_interfaces)
 find_package(geometry_msgs REQUIRED)
 
 if(BUILD_TESTING)
@@ -25,7 +25,7 @@ if(BUILD_TESTING)
 endif()
 
 add_executable(action_server_node src/action_server.cpp)
-ament_target_dependencies(action_server_node rclcpp rclcpp_action t3_action_msg geometry_msgs)
+ament_target_dependencies(action_server_node rclcpp rclcpp_action custom_interfaces geometry_msgs)
 
 install(TARGETS
    action_server_node

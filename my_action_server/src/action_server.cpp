@@ -5,14 +5,14 @@
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 
-#include "t3_action_msg/action/move.hpp"
+#include "custom_interfaces/action/move.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 
 
 class MyActionServer : public rclcpp::Node
 {
 public:
-  using Move = t3_action_msg::action::Move;
+  using Move = custom_interfaces::action::Move;
   using GoalHandleMove = rclcpp_action::ServerGoalHandle<Move>;
 
   explicit MyActionServer(const rclcpp::NodeOptions & options = rclcpp::NodeOptions())

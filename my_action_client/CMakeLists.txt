@@ -9,7 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
-find_package(t3_action_msg REQUIRED)
+find_package(custom_interfaces)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -24,7 +24,7 @@ if(BUILD_TESTING)
 endif()
 
 add_executable(action_client_node src/action_client.cpp)
-ament_target_dependencies(action_client_node rclcpp rclcpp_action t3_action_msg)
+ament_target_dependencies(action_client_node rclcpp rclcpp_action custom_interfaces)
 
 install(TARGETS
    action_client_node
