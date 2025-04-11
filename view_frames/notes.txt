@@ -1,0 +1,4 @@
+to generate 
+1.) go to desired dir in terminal
+2.) ros2 run tf2_tools view_frames
+3.) open PDF
